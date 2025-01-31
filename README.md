@@ -40,7 +40,12 @@ Simply visit the link and start chatting in real-time! 💬🔥
 
 ## Screenshots
 
+Here is the entry page of this website :-
+
 ![App Screenshot](https://github.com/Subhadro/quick_chat_app/blob/495b31f260b481914685254697d23467d26ee248/quicktalk1.png)
+
+This is an example of chatting with amazing UI :-
+
 ![App Screenshot](https://github.com/Subhadro/quick_chat_app/blob/495b31f260b481914685254697d23467d26ee248/chatting.png)
 
 
