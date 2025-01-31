@@ -11,7 +11,7 @@ export const getUsersFroSidebar = async (req, res) => {
         res.status(200).json(filtredUsers);
     } catch (error) {
 
-        console.log("error in getUsersFroSidebar", error.message);
+        // console.log("error in getUsersFroSidebar", error.message);
         res.status(500).json({ error: "Internal Server Error" });
     }
 }
@@ -28,7 +28,7 @@ export const getMessages = async (req, res) => {
         })
         res.status(200).json({ messages: messages })
     } catch (error) {
-        console.log("error in getMessage", error.message);
+        // console.log("error in getMessage", error.message);
         res.status(500).json({ error: "Internal Server Error" });
     }
 }
@@ -39,20 +39,20 @@ export const sendMessage = async (req, res) => {
         const senderId = req.user._id;
 
         let imageUrl, vedioUrl, docsUrl;
-        console.log("here inner of controller ")
+        // console.log("here inner of controller ")
         // Upload image if present
         if (image?.url) {
-            console.log("image ", image);
+            // console.log("image ", image);
             const uploadresponse = await cloudinary.uploader.upload(image.url);
             imageUrl = uploadresponse.secure_url;
-            console.log("image url ", imageUrl);
+            // console.log("image url ", imageUrl);
         }
 
         // Upload video if present
         if (vedio?.url) {
             if (vedio.url != null) {
 
-                console.log(vedio)
+                // console.log(vedio)
                 const uploadresponse = await cloudinary.uploader.upload(vedio.url, {
                     resource_type: "video",
                 });
@@ -62,7 +62,7 @@ export const sendMessage = async (req, res) => {
 
         // Upload document if present
         if (docs?.url) {
-            console.log(docs)
+            // console.log(docs)
             try {
                 // c.onsole.log(docs);
                 const uploadresponse = await cloudinary.uploader.upload(docs.url, {
@@ -91,11 +91,11 @@ export const sendMessage = async (req, res) => {
             docs: docsUrl ? { url: docsUrl, fileName: docs.fileName, fileSize: docs.fileSize } : null,
         });
 
-        console.log("before newmessage");
-        console.log(newMessage);
+        // console.log("before newmessage");
+        // console.log(newMessage);
 
         // Save the message to the database
-        console.log("before newmessage save");
+        // console.log("before newmessage save");
         await newMessage.save();
 
         // Real-time functionality using socket.io
@@ -103,7 +103,7 @@ export const sendMessage = async (req, res) => {
         if (receiverSocketId) {
             io.to(receiverSocketId).emit("newMessage", newMessage);
         }
-        console.log("before res json");
+        // console.log("before res json");
 
         // Respond with the new message
         res.status(201).json(newMessage);

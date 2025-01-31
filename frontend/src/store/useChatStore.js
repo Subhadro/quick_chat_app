@@ -35,7 +35,7 @@ export const useChatStore = create((set, get) => ({
             // console.log("after last refresh", res)
             // set({ messages: res.data });
         } catch (error) {
-            console.log(error)
+            // console.log(error)
             toast.error(error.response);
         } finally {
             set({ isMessagesLoading: false });
@@ -65,7 +65,7 @@ export const useChatStore = create((set, get) => ({
             // console.log("selected user:", selectedUser._id);
             const res = await axiosInstance.post(`/messages/send/${selectedUser._id}`, messageData);
 
-            console.log('New message sent:', res.data);
+            // console.log('New message sent:', res.data);
             set({ messages: [...messages, res.data] });
         } catch (error) {
             console.error('Error sending message:', error);

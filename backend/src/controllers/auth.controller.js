@@ -37,7 +37,7 @@ export const signup = async (req, res) => {
             res.status(400).json({ message: "Invalid user data" });
         }
     } catch (error) {
-        console.log("Error in signup ", error.message);
+        // console.log("Error in signup ", error.message);
         res.status(500).json({ message: "Internal Server Error" });
     }
 }
@@ -70,7 +70,7 @@ export const logout = (req, res) => {
         res.status(200).json({ message: "Logged out successfully" });
     }
     catch (error) {
-        console.log("Error in logout controller ", error.message);
+        // console.log("Error in logout controller ", error.message);
         res.status(400).json({ message: "Profile pic is required" });
     }
 }
@@ -95,7 +95,7 @@ export const checkAuth = async (req, res) => {
         res.status(200).json(req.user);
 
     } catch (error) {
-        console.log("Error in checkAuth controller", error.message);
+        // console.log("Error in checkAuth controller", error.message);
         res.status(500).json({ message: "internal server error" });
     }
 }

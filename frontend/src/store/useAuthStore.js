@@ -20,7 +20,7 @@ export const useAuthStore = create((set, get) => ({
             set({ authUser: res.data });
             get().connectSocket();
         } catch (error) {
-            console.log("Error in checkAuth:", error);
+            // console.log("Error in checkAuth:", error);
             set({ authUser: null });
         } finally {
             set({ isCheckingAuth: false });
@@ -34,7 +34,7 @@ export const useAuthStore = create((set, get) => ({
             set({ authUser: res.data });
             toast.success("Account created successfully");
             get().connectSocket();
-            console.log("new user entered ", get().socket)
+            // console.log("new user entered ", get().socket)
         } catch (error) {
             toast.error(error.response.data.message);
         } finally {
@@ -51,7 +51,7 @@ export const useAuthStore = create((set, get) => ({
             toast.success("Logged in successfully");
 
             get().connectSocket();
-            console.log("new user entered ", socket)
+            // console.log("new user entered ", socket)
         } catch (error) {
             toast.error(error.response.data.message);
         } finally {
@@ -64,7 +64,7 @@ export const useAuthStore = create((set, get) => ({
             await axiosInstance.post("/auth/logout");
             set({ authUser: null });
             toast.success("Logged out successfully");
-            console.log(" user disconnected ", get().socket)
+            // console.log(" user disconnected ", get().socket)
             get().disconnectSocket();
 
         } catch (error) {
@@ -79,7 +79,7 @@ export const useAuthStore = create((set, get) => ({
             set({ authUser: res.data });
             toast.success("Profile updated successfully");
         } catch (error) {
-            console.log("error in update profile:", error);
+            // console.log("error in update profile:", error);
             toast.error(error.response.data.message);
         } finally {
             set({ isUpdatingProfile: false });
@@ -104,7 +104,7 @@ export const useAuthStore = create((set, get) => ({
         });
     },
     disconnectSocket: () => {
-        console.log(get().socket.connected);
+        // console.log(get().socket.connected);
         if (get().socket?.connected) get().socket.disconnect();
     },
 }));
