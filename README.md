@@ -1,11 +1,11 @@
 
-# Project Title
+#Project Title
 
-  QuickTalk 🚀 – Fast, Secure & Stylish Messaging
+  QuickChat 🚀 – Fast, Secure & Stylish Messaging
 
- # Project Description
+#Project Description
  
-    QuickTalk is a modern and feature-rich real-time chat application built with the MERN stack. It offers a seamless login and signup experience, 32 unique themes, and a fully responsive UI for a smooth chatting experience on any device. Powered by Socket.io, it ensures instant message delivery and real-time interactions. With stunning color combinations and great features, QuickTalk is designed to make communication fast, engaging, and visually appealing.
+    QuickChat is a modern and feature-rich real-time chat application built with the MERN stack. It offers a seamless login and signup experience, 32 unique themes, and a fully responsive UI for a smooth chatting experience on any device. Powered by Socket.io, it ensures instant message delivery and real-time interactions. With stunning color combinations and great features, QuickChat is designed to make communication fast, engaging, and visually appealing.
 
 
 ## Installation
@@ -15,26 +15,26 @@ Install this fullstack application with the help of following commands:-
   git clone "https://github.com/Subhadro/quick_chat_app.git"
   cd quick_chat_app
 
-  # Install frontend dependencies
+#Install frontend dependencies
   cd frontend
   npm install
 
-  # Start frontend
+#Start frontend
   npm run dev
 
-  # Install backend dependencies
+#Install backend dependencies
   cd ../backend
   npm install
 
-  # Start backend
+#Start backend
   npm run dev
 
 ```
 
  ## Deployment 🚀  
-QuickTalk is live! You can access the application here:  
+QuickChat is live! You can access the application here:  
 
-🔗 **[QuickTalk Live](https://quick-chat-ap.onrender.com)**  
+🔗 **[QuickChat Live](https://quick-chat-ap.onrender.com)**  
 
 Simply visit the link and start chatting in real-time! 💬🔥  
 
@@ -98,4 +98,4 @@ Used **Axios** to handle API requests efficiently. Created a global Axios instan
 #### 🔹 Creating a Protected Route  
 Implemented a **Protected Route** mechanism to restrict access to authenticated users only. This ensured that only logged-in users could access chat functionalities, enhancing app security.  
 
-Each of these lessons strengthened my understanding of **full-stack development**, making the application more robust, scalable, and user-friendly! 🚀  
+Each of these lessons strengthened my understanding of **full-stack development**, making the application more robust, scalable, and user-friendly! 🚀
